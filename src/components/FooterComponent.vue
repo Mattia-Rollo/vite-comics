@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <div class="container">
             <ul>
                 <ul>
@@ -160,17 +160,18 @@
 <style lang="scss" scoped>
 @use '../assets/style/partials/mixins' as *;
 @use '../assets/style/partials/variables' as *;
-div {
+.wrapper {
     position: relative;
     background-color: $almost-dark;
     background-image: url('../assets/img/footer-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+}
     div.container {
         @include d-flex;
         padding: 1rem 0;
-        background: transparent;
+        // background: transparent;s
         ul {
             margin: 0;
             list-style: none;
@@ -179,7 +180,7 @@ div {
             li a{
                 text-decoration: none;
                 padding: 5px 0;
-                color: $white;
+                color: $grey;
                 display: inline-block;
                 padding: 0.2rem 0;
                 
@@ -194,7 +195,7 @@ div {
         }
     }
 
-}
+
 .logo {
     background-image: url('../assets/img/dc-logo-bg.png');
     background-color: transparent;
