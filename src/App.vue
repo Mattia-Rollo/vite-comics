@@ -7,10 +7,12 @@
   </main>
   
     <FooterComponent />
+    <BottomFooterComponent />
   
 </template>
 
 <script>
+import BottomFooterComponent from './components/BottomFooterComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import ProductsList from './components/ProductsList.vue';
@@ -19,7 +21,8 @@ import ProductsList from './components/ProductsList.vue';
     components: {
     HeaderComponent,
     ProductsList,
-    FooterComponent
+    FooterComponent,
+    BottomFooterComponent
 },
       data() {
         return {
