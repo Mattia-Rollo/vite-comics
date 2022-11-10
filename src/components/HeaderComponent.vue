@@ -5,7 +5,7 @@
         </div>
         <ul>
             <li v-for="(list,index) in lists" :key="index" :class="{'active': list.current}">
-            <a :href="list.url">{{list.text}}</a></li>
+            <a :href="list.url">{{list.text.toUpperCase()}}</a></li>
         </ul>
     </header>
 </template>
@@ -89,15 +89,17 @@ ul {
     @include d-flex;
     li {
         @include d-flex;
-        
+        padding: 0 1rem
     }
     li  a {
         @include d-flex;
+        font-weight: 700;
         align-items: center;
-        border-bottom: 2px solid transparent;
+        border-bottom: 5px solid transparent;
         text-decoration: none;
         color: $black-bg-main;
-        padding: 0 1rem;
+        // padding: 0 1rem;
+        transition: all .4s;
 
         &.active,
         &:hover {

@@ -2,19 +2,24 @@
   <div>
     <HeaderComponent />
   </div>
-  <div>
+  <main>
     <ProductsList />
-  </div>
+  </main>
+  <footer>
+    <FooterComponent />
+  </footer>
 </template>
 
 <script>
+import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import ProductsList from './components/ProductsList.vue';
 
   export default {
     components: {
     HeaderComponent,
-    ProductsList
+    ProductsList,
+    FooterComponent
 },
       data() {
         return {
