@@ -5,9 +5,9 @@
   <main>
     <ProductsList />
   </main>
-  <footer>
+  
     <FooterComponent />
-  </footer>
+  
 </template>
 
 <script>

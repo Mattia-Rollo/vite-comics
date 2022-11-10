@@ -2,28 +2,29 @@
     <div>
         <div class="container">
             <ul>
-               <li>DCCOMICS</li>    
-               <li>DCCOMICS</li>    
-               <li>DCCOMICS</li>    
-               <li>DCCOMICS</li>    
-               <li>DCCOMICS</li>    
-               <li>DCCOMICS</li>    
-              
+                <ul>
+                <h4>Dc Comics</h4>
+                <li v-for="(item,index) in comics" :key="index">
+                <a :href="item.url">{{item.linkText}}</a></li>
+                </ul>
+                <ul>
+                <li v-for="(item,index) in lista2" :key="index">
+                <a :href="item.url">{{item.linkText}}</a></li>
+                </ul>
             </ul>
             <ul>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
+                <li v-for="(item,index) in lista3" :key="index">
+                <a :href="item.url">{{item.linkText}}</a></li>
+                
             </ul>
             <ul>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
-                <li>ciao</li>
+                <li v-for="(item,index) in lista4" :key="index">
+                <a :href="item.url">{{item.linkText}}</a></li>
+                
             </ul>
+            <div class="logo">
+            
+            </div>
         </div>
     </div>
 </template>
@@ -33,45 +34,116 @@
         name: 'FooterComponent',
         data() {
             return {
-                sections: [
-                    [
-                        {
-                           title: 'dccomics',
-                           links: [
-                            'characters',
-                            'comics',
-                            'tv',
-                            'movies',
-                            'collectivbles',
-                            'videos',
-                            'fans'
-                           ]
-                        },
-                        {
-                           title: 'dccomics',
-                           links: [
-                            'characters',
-                            'comics',
-                            'tv',
-                            'movies',
-                            'collectivbles',
-                            'videos',
-                            'fans'
-                           ]
+                comics: [{
+                    linkText: 'Characters',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Comics',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Movies',
+                    url: '#' 
+                },
+                {
+                    linkText: 'TV',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Games',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Videos',
+                    url: '#' 
+                },
+                {
+                    linkText: 'News',
+                    url: '#' 
+                }],
+                shop: [
+                    {
+                    linkText: 'Shop DC',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Shop DC Collectables',
+                    url: '#' 
+                },
+                ],
+                dc: [
+                    {
+                    linkText: 'Terms Of Use',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Privacy Policy',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Ad Choices',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Advertising',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Jobs',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Subscriptions',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Talent Workshops',
+                    url: '#' 
+                },
+                {
+                    linkText: 'CPSC Certificates',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Ratings',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Shop Help',
+                    url: '#' 
+                },
+                {
+                    linkText: 'Contact Us',
+                    url: '#' 
+                }
+                ],
+                sites: [
+                    {
+                    linkText: 'DC',
+                    url: '#' 
+                },
+                {
+                    linkText: 'MAD Magazine',
+                    url: '#' 
+                },
+                {
+                    linkText: 'DC Kids',
+                    url: '#' 
+                },
+                {
+                    linkText: 'DC Universe',
+                    url: '#' 
+                },
+                {
+                    linkText: 'DC Power Visa',
+                    url: '#' 
+                },
+                ],
+                        
+                    
                         }
-                    
-                    ],
-                    [
-                        'dc'
-                    
-                    ],
-                    [
-                        'site',
-                    ]
-
-                    
-                    ]
-            }
+            
         },
     }
 </script>
@@ -80,20 +152,50 @@
 @use '../assets/style/partials/mixins' as *;
 @use '../assets/style/partials/variables' as *;
 div {
+    position: relative;
     background-color: $almost-dark;
     background-image: url('../assets/img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
     div.container {
         @include d-flex;
+        padding: 1rem 0;
+        background: transparent;
         ul {
+            margin: 0;
             list-style: none;
-            padding: 1rem;
+            padding: 0 1rem 1rem;
             color: $grey;
-            &:first-child{
+            li a{
+                text-decoration: none;
+                padding: 5px 0;
                 color: $white;
+                display: inline-block;
+                padding: 0.2rem 0;
+                
+            }
+            li:first-child a{
+                display: inline-block;
+                text-transform: uppercase;
+                color: $white;
+                font-size: 1.2rem;
+                padding: 1rem 0;
             }
         }
     }
 
 }
+.logo {
+    background-image: url('../assets/img/dc-logo-bg.png');
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: auto;
+    width: 500px;
+    height: 500px;
 
+}
 </style>
