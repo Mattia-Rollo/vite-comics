@@ -2,15 +2,20 @@
   <div>
     <HeaderComponent />
   </div>
+  <div>
+    <ProductsList />
+  </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
+import ProductsList from './components/ProductsList.vue';
 
   export default {
     components: {
-       HeaderComponent 
-      },
+    HeaderComponent,
+    ProductsList
+},
       data() {
         return {
           
