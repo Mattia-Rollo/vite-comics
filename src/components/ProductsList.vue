@@ -24,6 +24,7 @@
 div {
     background-color: $black-bg-main;
     color: $white;
+    padding: 1rem 0;
 }
 
 </style>

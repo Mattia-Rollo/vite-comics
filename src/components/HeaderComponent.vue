@@ -80,7 +80,7 @@ header {
     @include d-flex;
     justify-content: space-between;
     // align-items: center;
-    padding: 0 1rem;
+    
 }
 ul {
     list-style: none;
@@ -89,7 +89,7 @@ ul {
     @include d-flex;
     li {
         @include d-flex;
-        padding: 0 1rem
+        padding: 0 1rem;
     }
     li  a {
         @include d-flex;

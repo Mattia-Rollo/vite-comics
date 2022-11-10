@@ -3,22 +3,23 @@
         <div class="container">
             <ul>
                 <ul>
-                <h4>Dc Comics</h4>
+                
                 <li v-for="(item,index) in comics" :key="index">
                 <a :href="item.url">{{item.linkText}}</a></li>
                 </ul>
+                
                 <ul>
-                <li v-for="(item,index) in lista2" :key="index">
+                <li v-for="(item,index) in shop" :key="index">
                 <a :href="item.url">{{item.linkText}}</a></li>
                 </ul>
             </ul>
             <ul>
-                <li v-for="(item,index) in lista3" :key="index">
+                <li v-for="(item,index) in dc" :key="index">
                 <a :href="item.url">{{item.linkText}}</a></li>
                 
             </ul>
             <ul>
-                <li v-for="(item,index) in lista4" :key="index">
+                <li v-for="(item,index) in sites" :key="index">
                 <a :href="item.url">{{item.linkText}}</a></li>
                 
             </ul>
@@ -34,7 +35,12 @@
         name: 'FooterComponent',
         data() {
             return {
-                comics: [{
+                comics: [
+                    {
+                    linkText: 'Dc Comics',
+                    url: '#' 
+                },
+                {
                     linkText: 'Characters',
                     url: '#' 
                 },
@@ -62,7 +68,10 @@
                     linkText: 'News',
                     url: '#' 
                 }],
-                shop: [
+                shop: [{
+                    linkText: 'Shop',
+                    url: '#' 
+                },
                     {
                     linkText: 'Shop DC',
                     url: '#' 
@@ -165,7 +174,7 @@ div {
         ul {
             margin: 0;
             list-style: none;
-            padding: 0 1rem 1rem;
+            padding: 0 1.2rem 1rem 0;
             color: $grey;
             li a{
                 text-decoration: none;
