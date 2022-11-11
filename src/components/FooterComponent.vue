@@ -198,7 +198,7 @@ div.container {
 }
 
 .logo {
-    background-image: url("../assets/img/dc-logo-bg.png");
+    background-image: url("/img/dc-logo-bg.png");
     background-color: transparent;
     position: absolute;
     right: 0;
