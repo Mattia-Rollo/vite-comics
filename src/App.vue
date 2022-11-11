@@ -5,10 +5,10 @@
   <main>
     <ProductsList />
   </main>
-    <ExtraComponent/>
-    <FooterComponent />
-    <BottomFooterComponent />
-  
+  <ExtraComponent />
+  <FooterComponent />
+  <BottomFooterComponent />
+
 </template>
 
 <script>
@@ -18,26 +18,23 @@ import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import ProductsList from './components/ProductsList.vue';
 
-  export default {
-    components: {
+export default {
+  components: {
     HeaderComponent,
     ProductsList,
     FooterComponent,
     BottomFooterComponent,
     ExtraComponent
-},
-      data() {
-        return {
-          
-        }
-      },
+  },
+  data() {
+    return {
+
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 @use './assets/style/partials/mixins' as *;
 @use './assets/style/partials/variables' as *;
-
-
-
 </style>

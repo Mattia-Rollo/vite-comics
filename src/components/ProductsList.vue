@@ -7,14 +7,14 @@
 </template>
 
 <script>
-    export default {
-        name: 'ProductsList',
-        data() {
-            return {
-                
-            }
-        },
-    }
+export default {
+    name: 'ProductsList',
+    data() {
+        return {
+
+        }
+    },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -26,5 +26,4 @@ div {
     color: $white;
     padding: 1rem 0;
 }
-
 </style>
