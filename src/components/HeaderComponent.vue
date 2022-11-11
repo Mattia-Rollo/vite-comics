@@ -83,7 +83,12 @@ header {
     // align-items: center;
 
 }
-
+div{ 
+    padding: 0.6rem;
+    img{
+    width: 70%;
+}
+}
 ul {
     list-style: none;
     // height: 100%;
