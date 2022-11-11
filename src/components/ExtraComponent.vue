@@ -77,7 +77,7 @@ ul {
         text-decoration: none;
         color: $white;
         span{
-            
+            text-align: left;
         }
         div.image {
             text-align: center;

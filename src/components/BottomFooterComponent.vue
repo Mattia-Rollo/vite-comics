@@ -3,7 +3,7 @@
     <div class="container">
         <a href="#">SIGN UP</a>
         
-            <a class="follow" href="">FOLLOW US</a>
+        <a class="follow" href="">FOLLOW US</a>
         
         <ul>
             <li v-for="(item,index) in list" :key="index">
@@ -74,18 +74,30 @@ a {
     color: $white;
     background: transparent;
     border: 1px solid $blue;
+    transition: all 0.5s;
+    &:hover:not(.follow, ul a){
+        background-color: $blue;
+    }
 }
 
 .follow {
+    font-weight: 700;
     margin-left: auto;
     border: none;
     color: $blue;
+    &:hover {
+        color: $blue-light;
+    }
 }
 ul{
     list-style: none;
     @include d-flex;
     a{
         border: none;
+        &:hover img{
+            filter:brightness(1.8) contrast(10);
+            // background-color: $blue;
+        }
     }
 }
 
