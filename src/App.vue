@@ -5,7 +5,7 @@
   <main>
     <ProductsList />
   </main>
-  
+    <ExtraComponent/>
     <FooterComponent />
     <BottomFooterComponent />
   
@@ -13,6 +13,7 @@
 
 <script>
 import BottomFooterComponent from './components/BottomFooterComponent.vue';
+import ExtraComponent from './components/ExtraComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import ProductsList from './components/ProductsList.vue';
@@ -22,7 +23,8 @@ import ProductsList from './components/ProductsList.vue';
     HeaderComponent,
     ProductsList,
     FooterComponent,
-    BottomFooterComponent
+    BottomFooterComponent,
+    ExtraComponent
 },
       data() {
         return {
