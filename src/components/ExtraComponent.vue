@@ -40,7 +40,7 @@ div {
 
 ul {
     @include d-flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 1rem 0;
@@ -58,15 +58,17 @@ ul {
 
         div.image {
             text-align: center;
-            height: 100%;
+            // height: 50%;
 
             img {
-                width: 50%;
-                // margin-right: 1rem;
+                max-width: 100%;
+                height: 60px;
+                // width: 100px;
+                margin-right: 1rem;
             }
 
             img[src*="svg"] {
-                width: 80px;
+                height: 40px;
                 margin: 1rem;
             }
         }
