@@ -7,7 +7,7 @@
 
             <ul>
                 <li v-for="(item, index) in list" :key="index">
-                    <a :href="item.url"><img :src="getImagePath(`../assets/img/footer-${item.path}`)" alt=""></a>
+                    <a :href="item.url"><img :src="`./img/footer-${item.path}`" alt=""></a>
                 </li>
             </ul>
         </div>
@@ -47,9 +47,6 @@ export default {
         };
     },
     methods: {
-        getImagePath: function (imgPath) {
-            return new URL(imgPath, import.meta.url).href;
-        }
     }
 };
 </script>
