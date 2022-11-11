@@ -1,7 +1,7 @@
 <template>
     <header class="container">
         <div>
-            <img src="../assets/img/dc-logo.png" alt="">
+            <img src="../../public/img/dc-logo.png" alt="">
         </div>
         <ul>
             <li v-for="(list, index) in lists" :key="index" :class="{ 'active': list.current }">

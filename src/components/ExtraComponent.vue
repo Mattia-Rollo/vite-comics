@@ -5,7 +5,7 @@
                 <a href="{{item.url}}">
                     <div class="image">
 
-                        <img :src="getImagePath(`../assets/img/buy-comics-${item.imgPath}`)" alt="">
+                        <img :src="`./img/buy-comics-${item.imgPath}`" alt="">
                     </div>
                     <span>{{ item.text.toUpperCase() }}</span>
                 </a>
@@ -50,9 +50,7 @@ export default {
         }
     },
     methods: {
-        getImagePath: function (imgPath) {
-            return new URL(imgPath, import.meta.url).href;
-        }
+        
     }
 }
 </script>
