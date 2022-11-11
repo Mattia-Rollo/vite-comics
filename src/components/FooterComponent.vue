@@ -162,7 +162,7 @@ export default {
 .wrapper {
     position: relative;
     background-color: $almost-dark;
-    background-image: url("../assets/img/footer-bg.jpg");
+    background-image: url("/img/footer-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;

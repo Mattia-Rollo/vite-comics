@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul class="container">
-            <li v-for="(item, index) in list" :key="index">
+            <li v-for="(item, index) in lista" :key="index">
                 <a href="{{item.url}}">
                     <div class="image">
 
@@ -16,37 +16,12 @@
 </template>
 
 <script>
+import {list} from '../assets/data/data'
 export default {
     name: 'ExtraComponent',
     data() {
         return {
-            list: [
-                {
-                    imgPath: 'digital-comics.png',
-                    url: '#',
-                    text: 'digital comics'
-                },
-                {
-                    imgPath: 'merchandise.png',
-                    url: '#',
-                    text: 'merchandaise'
-                },
-                {
-                    imgPath: 'shop-locator.png',
-                    url: '#',
-                    text: 'shop locator'
-                },
-                {
-                    imgPath: 'subscriptions.png',
-                    url: '#',
-                    text: 'subscription'
-                },
-                {
-                    imgPath: 'dc-power-visa.svg',
-                    url: '#',
-                    text: 'DC POwer Visa'
-                },
-            ]
+            lista: list
         }
     },
     methods: {
