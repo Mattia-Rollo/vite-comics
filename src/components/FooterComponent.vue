@@ -160,7 +160,6 @@ export default {
 @use '../assets/style/partials/variables' as *;
 
 .wrapper {
-    position: relative;
     background-color: $almost-dark;
     background-image: url("/img/footer-bg.jpg");
     background-repeat: no-repeat;
@@ -169,8 +168,9 @@ export default {
 }
 
 div.container {
+    position: relative;
     @include d-flex;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
 
     // background: transparent;s
     ul {
@@ -199,13 +199,16 @@ div.container {
 
 .logo {
     background-image: url("/img/dc-logo-bg.png");
-    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    // background-color: transparent;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: auto;
-    width: 500px;
-    height: 500px;
+    
+    width: 560px;
+    height: 130%;
 }
 </style>

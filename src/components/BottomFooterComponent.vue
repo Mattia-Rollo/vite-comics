@@ -61,7 +61,7 @@ export default {
 }
 
 .container {
-    padding: 1rem 0;
+    padding: 1rem;
     @include d-flex;
     align-items: center;
 }

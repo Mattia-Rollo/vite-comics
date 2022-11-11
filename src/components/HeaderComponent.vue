@@ -84,7 +84,7 @@ header {
 
 }
 div{ 
-    padding: 0.6rem;
+    padding: 0 1rem;
     img{
     width: 70%;
 }

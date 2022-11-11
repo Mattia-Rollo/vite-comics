@@ -43,7 +43,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
 
     a {
         @include d-flex;
