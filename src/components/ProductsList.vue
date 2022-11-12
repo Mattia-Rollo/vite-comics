@@ -54,6 +54,7 @@ div.wrapper {
       @include d-flex;
       flex-wrap: wrap;
       padding: 1.5rem 0;
+      gap: 1rem 0;
       div.card {
         width: calc(100% / 6);
         padding: 0 1rem;
