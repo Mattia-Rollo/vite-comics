@@ -176,9 +176,11 @@ div.container {
     ul {
         margin: 0;
         list-style: none;
-        padding: 0 1.2rem 1rem 0;
+        padding: 0 2rem 1rem 0;
         color: $grey;
-
+        ul{
+            padding: 0;
+        }
         li a {
             text-decoration: none;
             padding: 5px 0;
