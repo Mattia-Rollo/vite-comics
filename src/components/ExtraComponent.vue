@@ -1,33 +1,29 @@
 <template>
-    <div>
-        <ul class="container">
-            <li v-for="(item, index) in lista" :key="index">
-                <a href="{{item.url}}">
-                    <div class="image">
-
-                        <img :src="`./img/buy-comics-${item.imgPath}`" alt="">
-                    </div>
-                    <span>{{ item.text.toUpperCase() }}</span>
-                </a>
-
-            </li>
-        </ul>
-    </div>
+  <div>
+    <ul class="container">
+      <li v-for="(item, index) in lista" :key="index">
+        <a href="{{item.url}}">
+          <div class="image">
+            <img :src="`./img/buy-comics-${item.imgPath}`" alt="" />
+          </div>
+          <span>{{ item.text.toUpperCase() }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
-import {list} from '../assets/data/data'
+import { list } from "../assets/data/data";
 export default {
-    name: 'ExtraComponent',
-    data() {
-        return {
-            lista: list
-        }
-    },
-    methods: {
-        
-    }
-}
+  name: "ExtraComponent",
+  data() {
+    return {
+      lista: list,
+    };
+  },
+  methods: {},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -35,44 +31,44 @@ export default {
 @use '../assets/style/partials/variables' as *;
 
 div {
-    background: $blue;
+  background: $blue;
 }
 
 ul {
+  @include d-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 1rem 1rem;
+
+  a {
     @include d-flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    list-style: none;
-    padding: 1rem 1rem;
+    text-decoration: none;
+    color: $white;
 
-    a {
-        @include d-flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        color: $white;
-
-        span {
-            text-align: left;
-        }
-
-        div.image {
-            text-align: center;
-            // height: 50%;
-
-            img {
-                max-width: 100%;
-                height: 60px;
-                // width: 100px;
-                margin-right: 1rem;
-            }
-
-            img[src*="svg"] {
-                height: 40px;
-                margin: 1rem;
-            }
-        }
-
+    span {
+      text-align: right;
     }
+
+    div.image {
+      text-align: center;
+      // height: 50%;
+
+      img {
+        max-width: 100%;
+        height: 60px;
+        // width: 100px;
+        margin-right: 1rem;
+      }
+
+      img[src*="svg"] {
+        height: 40px;
+        margin-right: 1rem;
+      }
+    }
+  }
 }
 </style>
