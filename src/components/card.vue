@@ -1,15 +1,17 @@
 <template>
-    <div>
-
-    </div>
+  <div :key="index" class="card">
+    <a href="#">
+      <img :src="src" :alt="title" />
+      <div>{{ title }}</div>
+    </a>
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+  name: "Card",
+  props: ["src", "title"],
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

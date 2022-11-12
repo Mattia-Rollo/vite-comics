@@ -1,53 +1,49 @@
 <template>
-    <div class="wrapper">
-        <div class="container">
-            <a href="#">SIGN UP</a>
+  <div class="wrapper">
+    <div class="container">
+      <a href="#">SIGN UP</a>
 
-            <a class="follow" href="">FOLLOW US</a>
+      <a class="follow" href="">FOLLOW US</a>
 
-            <ul>
-                <li v-for="(item, index) in list" :key="index">
-                    <a :href="item.url"><img :src="`./img/footer-${item.path}`" alt=""></a>
-                </li>
-            </ul>
-        </div>
+      <ul>
+        <li v-for="(item, index) in list" :key="index">
+          <a :href="item.url"><img :src="`./img/footer-${item.path}`" alt="" /></a>
+        </li>
+      </ul>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    nome: 'BottomFooterComponent',
-    data() {
-        return {
-            list: [
-                {
-                    path: 'facebook.png',
-                    url: '#'
-                },
-                {
-                    path: 'periscope.png',
-                    url: '#'
-                },
-                {
-                    path: 'pinterest.png',
-                    url: '#'
-                },
-                {
-                    path: 'twitter.png',
-                    url: '#'
-                },
-                {
-                    path: 'youtube.png',
-                    url: '#'
-                }
-
-
-
-            ]
-        };
-    },
-    methods: {
-    }
+  nome: "BottomFooterComponent",
+  data() {
+    return {
+      list: [
+        {
+          path: "facebook.png",
+          url: "#",
+        },
+        {
+          path: "periscope.png",
+          url: "#",
+        },
+        {
+          path: "pinterest.png",
+          url: "#",
+        },
+        {
+          path: "twitter.png",
+          url: "#",
+        },
+        {
+          path: "youtube.png",
+          url: "#",
+        },
+      ],
+    };
+  },
+  methods: {},
 };
 </script>
 
@@ -56,52 +52,52 @@ export default {
 @use '../assets/style/partials/variables' as *;
 
 .wrapper {
-    background-color: $almost-dark;
-    color: $white;
+  background-color: $almost-dark;
+  color: $white;
 }
 
-.container {
-    padding: 1rem;
-    @include d-flex;
-    align-items: center;
+div.container {
+  padding: 0 1rem;
+  @include d-flex;
+  align-items: center;
 }
 
 a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 0.7rem 1rem;
-    color: $white;
-    background: transparent;
-    border: 1px solid $blue;
-    transition: all 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  color: $white;
+  background: transparent;
+  border: 1px solid $blue;
+  transition: all 0.5s;
 
-    &:hover:not(.follow, ul a) {
-        background-color: $blue;
-    }
+  &:hover:not(.follow, ul a) {
+    background-color: $blue;
+  }
 }
 
 .follow {
-    font-weight: 700;
-    margin-left: auto;
-    border: none;
-    color: $blue;
+  font-weight: 700;
+  margin-left: auto;
+  border: none;
+  color: $blue;
 
-    &:hover {
-        color: $blue-light;
-    }
+  &:hover {
+    color: $blue-light;
+  }
 }
 
 ul {
-    list-style: none;
-    @include d-flex;
+  list-style: none;
+  @include d-flex;
 
-    a {
-        border: none;
+  a {
+    border: none;
 
-        &:hover img {
-            filter: brightness(1.8) contrast(10);
-            // background-color: $blue;
-        }
+    &:hover img {
+      filter: brightness(1.8) contrast(10);
+      // background-color: $blue;
     }
+  }
 }
 </style>

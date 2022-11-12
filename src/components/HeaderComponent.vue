@@ -84,9 +84,10 @@ header {
 
 }
 div{ 
-    padding: 0 1rem;
+    padding: 0.3rem 1rem;
     img{
-    width: 70%;
+    width: 80%;
+    display: inline-block;
 }
 }
 ul {
