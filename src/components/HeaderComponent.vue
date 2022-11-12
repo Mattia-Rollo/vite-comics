@@ -10,7 +10,7 @@
         </li>
       </ul>
     </Transition>
-
+    <Transition name="slide-fade"> </Transition>
   </header>
 </template>
 
@@ -95,20 +95,17 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-
   // align-items: center;
   div {
     padding: 0.3rem;
     // width: 50px;
     height: 100%;
-
     img {
       max-height: 100%;
       display: inline-block;
     }
   }
 }
-
 ul {
   list-style: none;
   height: 100%;
@@ -141,11 +138,9 @@ ul {
 .slide-fade-enter-active {
   transition: all 0.2s ease-out;
 }
-
 .slide-fade-leave-active {
   transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
 }
-
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   transform: translateY(-20px);
