@@ -10,7 +10,9 @@
         </li>
       </ul>
     </Transition>
-    <Transition name="slide-fade"> </Transition>
+    <Transition name="slide-fade">
+      <span v-if="mobileView"><i class="fa-solid fa-bars" @click=""></i></span>
+    </Transition>
   </header>
 </template>
 
@@ -95,17 +97,20 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+
   // align-items: center;
   div {
     padding: 0.3rem;
     // width: 50px;
     height: 100%;
+
     img {
       max-height: 100%;
       display: inline-block;
     }
   }
 }
+
 ul {
   list-style: none;
   height: 100%;
@@ -134,13 +139,26 @@ ul {
     }
   }
 }
+span {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+// span:after {
+//   content: "\f0c9";
+//   font-weight: 600;
+//   font-size: 1rem;
+//   font-family: "Font Awesome 6 Free";
+// }
 
 .slide-fade-enter-active {
   transition: all 0.2s ease-out;
 }
+
 .slide-fade-leave-active {
   transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
 }
+
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   transform: translateY(-20px);
