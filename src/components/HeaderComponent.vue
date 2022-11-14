@@ -97,6 +97,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  position: relative;
 
   // align-items: center;
   div {
@@ -116,6 +117,15 @@ ul {
   height: 100%;
   // background-color: aqua;
   @include d-flex;
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: 80px;
+    height: auto;
+    z-index: 10;
+  }
 
   li {
     @include d-flex;
@@ -131,6 +141,10 @@ ul {
     color: $black-bg-main;
     // padding: 0 1rem;
     transition: all 0.4s;
+    @media screen and (max-width: 950px) {
+      padding: 0.8rem 0;
+      // width: 100%;
+    }
 
     &.active,
     &:hover {
