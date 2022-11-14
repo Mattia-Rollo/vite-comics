@@ -143,7 +143,7 @@ ul {
     transition: all 0.4s;
     @media screen and (max-width: 950px) {
       padding: 0.8rem 0;
-      // width: 100%;
+      width: 100%;
     }
 
     &.active,
